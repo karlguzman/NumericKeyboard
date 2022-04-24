@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'maven-publish'
+//apply plugin: 'maven-publish'
 
 apply plugin: 'com.vanniktech.maven.publish'
 
@@ -37,6 +37,9 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
 
     implementation "androidx.appcompat:appcompat:$appcompat"
+}
+mavenPublish {
+    releaseSigningEnabled = false
 }
 afterEvaluate {
     publishing {
