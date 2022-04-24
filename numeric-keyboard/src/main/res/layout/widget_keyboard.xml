@@ -12,16 +12,19 @@
 
         <TextView
             android:id="@+id/key1"
+            android:tag="8"
             style="@style/Keyboard.Key"
             android:text="1" />
 
         <TextView
             android:id="@+id/key2"
+            android:tag="9"
             style="@style/Keyboard.Key"
             android:text="2" />
 
         <TextView
             android:id="@+id/key3"
+            android:tag="10"
             style="@style/Keyboard.Key"
             android:text="3" />
     </LinearLayout>
@@ -32,16 +35,19 @@
 
         <TextView
             android:id="@+id/key4"
+            android:tag="11"
             style="@style/Keyboard.Key"
             android:text="4" />
 
         <TextView
             android:id="@+id/key5"
+            android:tag="12"
             style="@style/Keyboard.Key"
             android:text="5" />
 
         <TextView
             android:id="@+id/key6"
+            android:tag="13"
             style="@style/Keyboard.Key"
             android:text="6" />
     </LinearLayout>
@@ -52,16 +58,19 @@
 
         <TextView
             android:id="@+id/key7"
+            android:tag="14"
             style="@style/Keyboard.Key"
             android:text="7" />
 
         <TextView
             android:id="@+id/key8"
+            android:tag="15"
             style="@style/Keyboard.Key"
             android:text="8" />
 
         <TextView
             android:id="@+id/key9"
+            android:tag="16"
             style="@style/Keyboard.Key"
             android:text="9" />
     </LinearLayout>
@@ -72,16 +81,19 @@
 
         <com.konaire.numerickeyboard.view.IconifiedTextView
             android:id="@+id/keyRemove"
+            android:tag="67"
             style="@style/Keyboard.Key"
             android:text="&#xe14a;" />
 
         <TextView
             android:id="@+id/key0"
+            android:tag="7"
             style="@style/Keyboard.Key"
             android:text="0" />
 
         <TextView
             android:id="@+id/keySpecial"
+            android:tag="66"
             style="@style/Keyboard.Key" />
 
     </LinearLayout>

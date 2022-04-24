@@ -5,6 +5,7 @@ import android.content.Context
 import android.graphics.Color
 import android.util.AttributeSet
 import android.util.TypedValue
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -133,6 +134,7 @@ class NumericKeyboard : FrameLayout {
             field = value
             if (childCount > 0) {
                 updateView(getChildAt(0))
+                NumericKeyboard@this.field?.dispatchKeyEvent(KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER))
             }
         }
 

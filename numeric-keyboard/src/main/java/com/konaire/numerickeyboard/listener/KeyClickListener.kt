@@ -1,5 +1,6 @@
 package com.konaire.numerickeyboard.listener
 
+import android.view.KeyEvent
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
@@ -14,11 +15,9 @@ internal class KeyClickListener(
     override fun onClick(view: View?) {
         val field = this.field ?: return
 
-        if (view is IconifiedTextView) {
-            field.removeCharBeforeSelection()
-        } else if (view is TextView) {
-            val newChar = view.text[0]
-            field.addCharAfterSelection(newChar)
+        if (view is TextView) {
+            val keyCode = Integer.parseInt(view.tag as String)
+            field.dispatchKeyEvent(KeyEvent(KeyEvent.ACTION_DOWN, keyCode))
         }
     }
 
