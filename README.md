@@ -47,10 +47,29 @@ In the following example keyboard was initialized from the layout.
 
 ```xml  
 <FrameLayout  
- xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">  
- <EditText android:id="@+id/code" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/hint" android:inputType="number" android:textColor="@android:color/black" android:textSize="@dimen/text_size" />  
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size" />
+
  <!-- Some other stuff -->  
- <com.konaire.numerickeyboard.NumericKeyboard android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" android:layout_marginBottom="@dimen/gap" app:field="@+id/code" app:keyTextColor="@color/green" /></FrameLayout>  
+
+    <com.konaire.numerickeyboard.NumericKeyboard
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/gap"
+        app:field="@+id/code"
+        app:keyTextColor="@color/green" />
+</FrameLayout>
 ```  
 
 ### From code
@@ -61,8 +80,15 @@ Also you can set all custom parameters from the code. There is an example:
 import kotlinx.android.synthetic.main.activity_main.*  
   
 class MainActivity: AppCompatActivity() {  
- override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState) setContentView(R.layout.activity_main)  
- keyboard.field = field keyboard.fieldMaxLength = 10 keyboard.keyTextColor = Color.GREEN }}  
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        keyboard.field = field
+        keyboard.fieldMaxLength = 10
+        keyboard.keyTextColor = Color.GREEN
+    }
+}
 ```  
 
 # License
