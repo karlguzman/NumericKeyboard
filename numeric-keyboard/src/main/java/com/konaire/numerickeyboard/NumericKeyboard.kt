@@ -86,6 +86,18 @@ class NumericKeyboard : FrameLayout {
         }
 
     /**
+     * Text size of the special key.
+     */
+    @Suppress("MemberVisibilityCanBePrivate")
+    var keySpecialTextSize: Float = 0F
+        set(value) {
+            field = value
+            if (childCount > 0) {
+                updateView(getChildAt(0))
+            }
+        }
+
+    /**
      * Text color of a key.
      */
     @Suppress("MemberVisibilityCanBePrivate")
@@ -129,6 +141,10 @@ class NumericKeyboard : FrameLayout {
         val defaultKeyTextSize = context.resources.getDimensionPixelSize(R.dimen.keyboard_text_size)
         val defaultKeyHeight = context.resources.getDimensionPixelSize(R.dimen.keyboard_row_height)
 
+        val defaultKeySpecialTextSize = context.resources.getDimensionPixelSize(R.dimen.keyboard_text_size)
+
+
+
         fieldId = attributes.getResourceId(R.styleable.NumericKeyboard_field, 0)
         fieldMaxLength = attributes.getInteger(R.styleable.NumericKeyboard_fieldMaxLength, 0)
 
@@ -137,6 +153,8 @@ class NumericKeyboard : FrameLayout {
         keyTextColor = attributes.getColor(R.styleable.NumericKeyboard_keyTextColor, Color.BLACK)
 
         keySpecialValue = attributes.getString(R.styleable.NumericKeyboard_keySpecial) ?: ""
+
+        keySpecialTextSize = attributes.getDimensionPixelSize(R.styleable.NumericKeyboard_keySpecialTextSize, defaultKeySpecialTextSize).toFloat()
 
         post { initViews() }
     }
@@ -202,7 +220,7 @@ class NumericKeyboard : FrameLayout {
         key9.setTextSize(TypedValue.COMPLEX_UNIT_PX, keyTextSize)
         key0.setTextSize(TypedValue.COMPLEX_UNIT_PX, keyTextSize)
         keyRemove.setTextSize(TypedValue.COMPLEX_UNIT_PX, 0.8F * keyTextSize)
-        keySpecial.setTextSize(TypedValue.COMPLEX_UNIT_PX, keyTextSize)
+        keySpecial.setTextSize(TypedValue.COMPLEX_UNIT_PX, keySpecialTextSize)
 
         key1.setOnClickListener(listener)
         key2.setOnClickListener(listener)

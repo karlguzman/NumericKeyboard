@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'maven-publish'
 
 apply plugin: 'com.vanniktech.maven.publish'
 
@@ -36,4 +37,17 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
 
     implementation "androidx.appcompat:appcompat:$appcompat"
+}
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.karlguzman'
+                artifactId = 'numeric-keyboard'
+                version = '1.2.1'
+            }
+        }
+    }
 }

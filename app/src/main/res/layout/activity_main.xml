@@ -29,5 +29,7 @@
         android:layout_alignParentBottom="true"
         app:field="@+id/field"
         app:fieldMaxLength="10"
-        app:keyTextColor="@android:color/holo_red_dark" />
+        app:keySpecial="Enter"
+        app:keySpecialTextSize="23sp"
+        app:keyTextColor="@android:color/white" />
 </RelativeLayout>

@@ -9,5 +9,7 @@
         <attr name="keyTextColor" format="color" />
 
         <attr name="keySpecial" format="string" />
+        <attr name="keySpecialTextSize" format="dimension" />
+
     </declare-styleable>
 </resources>
