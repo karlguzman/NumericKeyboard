@@ -26,7 +26,7 @@ allprojects {
 ```java  
 dependencies {  
 	// other dependencies here implementation 
-	implementation 'com.github.karlguzman:NumericKeyboard:1.2.1'
+	implementation 'com.github.karlguzman:NumericKeyboard:{TAG}'
 }
 ```  
 
@@ -92,4 +92,4 @@ class MainActivity: AppCompatActivity() {
 ```  
 
 # License
-The library is distributed under the [MIT LICENSE](https://github.com/konaire/NumericKeyboard/blob/master/LICENSE.txt).
+The library is distributed under the [MIT LICENSE](https://github.com/karlguzman/NumericKeyboard/blob/master/LICENSE.txt).
